@@ -1,5 +1,7 @@
 #include <stdlib.h>
 
+/*  DCL31-C  */
+
 struct flexArrayStruct {
 	int num;
 	int data[1];

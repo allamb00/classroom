@@ -1,28 +1,28 @@
 #include <stdio.h>
 #include <stddef.h>
+#include <string.h>
 
-const char *p;
+/*  DCL30-C  */
 
-char *funcion1(void) {
-	char array[10] = "Mi Cadena";
-	/*  Initialize array  */
-	return array;
+void funcion1(char *p_param) {
+	strcpy(p_param, "Mi cadena");
 }
 
-void funcion2(void) {
-	const char c_str[] = "Todo va bien";
-	p = c_str;
+void funcion2(char *p_param) {
+	strcpy(p_param, "Todo va bien");
 }
 
-void funcion3(void) {
+void funcion3(char *p_param) {
+	printf("%s\n", p_param);
+}
+
+int main(void) {
+	char p[20];
+
+	funcion1(p);
 	printf("%s\n", p);
-}
-
-int main (void) {
-	p = funcion1();
-	printf("%s\n", p)
-	funcion2();
-	funcion3();
+	funcion2(p);
+	funcion3(p);
 	printf("%s\n", p);
 
 	return 0;

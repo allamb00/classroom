@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/*  DCL41-C  */
+
 extern void f(int i);
 
 void func(int expr) {
