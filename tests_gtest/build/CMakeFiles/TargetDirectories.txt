@@ -1,0 +1,3 @@
+/home/allamb00/ULE/DPS/practicas/lab2-unit-tests-allamb00/build/CMakeFiles/runTests.dir
+/home/allamb00/ULE/DPS/practicas/lab2-unit-tests-allamb00/build/CMakeFiles/edit_cache.dir
+/home/allamb00/ULE/DPS/practicas/lab2-unit-tests-allamb00/build/CMakeFiles/rebuild_cache.dir
