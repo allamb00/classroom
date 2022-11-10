@@ -21,21 +21,21 @@
 enum { va_eol = -1 };
 
 unsigned int average(int first, ...){
-	unsigned int count = 0;
-	unsigned int sum = 0;
+	unsigned int count = 0; /* Se inicializa una variable para contar elementos */
+	unsigned int sum = 0; /* Se inicializa una variable para almacenar una suma */
 	int i = first;
-	va_list args;
+	va_list args; /* Se guarda en va_list los argumentos que han pasado */
 
-	va_start(args, first);
+	va_start(args, first); /* se inicia el iterador va_start con los argumentos */
 
-	while(i != va_eol) {
-		sum += i;
-		count++;
-		i = va_arg(args, int);
+	while(i != va_eol) { /* mientras siga habiendo valores en la lista */
+		sum += i; /* se siguen sumando */
+		count++; /* y se incrementa el numero de valores */
+		i = va_arg(args, int); /* se sustituye el valor de i por el siguiente de la lista */
 	}
 
-	va_end(args);
-	return (count ? (sum/count) : 0);
+	va_end(args); /* se libera el iterador */
+	return (count ? (sum/count) : 0); /* Se devuelve 0 si los valores son 0, y la media en otro caso */
 }
 
 int main(void)
